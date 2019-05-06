@@ -1,4 +1,3 @@
-<?php //include ('connect.php');?>
 <?php
 $access_token = 'o4fb8viqFsb84FTpnYD7PDfjg+LuY7G/l+p/4o9aqRR/mH7ejXySBfTX5ejdftWxYJH6FTRlxQNBh5wC9rfE/IkSwYnhCvFYIWZMr+TG+Yj4eCPkFQKZnyDMu6YiYGTv9xRS3bYw7/OBbvXqZl3xmwdB04t89/1O/w1cDnyilFU=';
 
@@ -16,16 +15,8 @@ if (!is_null($events['events'])) {
    $text = $event['message']['text'];
    // Get replyToken
    $replyToken = $event['replyToken'];
-   $sql= "SELECT * FROM member WHERE $text='Username'";
-   $dbquery = mysql_db_query($dbname,$sql)or die("Error");
-   $result=mysql_query($sql);
-		$rows =mysql_num_rows($result);
-		$i=0;
-		if($rows>$i){
-  $textOutput='YES';
-		}else{ $textOutput='NO'}
    
-  // $textOutput = array('ศูนย์','หนึ่ง','สอง','สาม','สี่','ห้า','หก','เจ็ด','แปด','เก้า','สิบ');
+   $textOutput = array('ศูนย์','หนึ่ง','สอง','สาม','สี่','ห้า','หก','เจ็ด','แปด','เก้า','สิบ');
 
    // Build message to reply back
    $messages = [
