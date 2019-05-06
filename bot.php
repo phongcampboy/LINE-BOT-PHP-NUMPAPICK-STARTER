@@ -16,12 +16,13 @@ if (!is_null($events['events'])) {
    // Get replyToken
    $replyToken = $event['replyToken'];
    
-   $textOutput = array('ศูนย์','หนึ่ง','สอง','สาม','สี่','ห้า','หก','เจ็ด','แปด','เก้า','สิบ');
+  // $textOutput = array('ศูนย์','หนึ่ง','สอง','สาม','สี่','ห้า','หก','เจ็ด','แปด','เก้า','สิบ');
 
    // Build message to reply back
    $messages = [
     'type' => 'text',
-    'text' => $textOutput[$text]
+    'text' => 'xxxx'
+    //'text' => $textOutput[$text]
    ];
 
    // Make a POST Request to Messaging API to reply to sender
