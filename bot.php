@@ -16,6 +16,8 @@ if (!is_null($events['events'])) {
    $text = $event['message']['text'];
    // Get replyToken
    $replyToken = $event['replyToken'];
+   $sql= "SELECT * FROM member WHERE Status='User'";
+   $dbquery = mysql_db_query($dbname,$sql)or die("Error");
    
   // $textOutput = array('ศูนย์','หนึ่ง','สอง','สาม','สี่','ห้า','หก','เจ็ด','แปด','เก้า','สิบ');
 
