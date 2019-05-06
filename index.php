@@ -15,6 +15,7 @@ if (!is_null($events['events'])) {
    $text = $event['message']['text'];
    // Get replyToken
    $replyToken = $event['replyToken'];
+   echo $replyToken;
 
    // Build message to reply back
    $messages = [
@@ -44,4 +45,4 @@ if (!is_null($events['events'])) {
   }
  }
 }
-echo $content;
+echo "OK";
