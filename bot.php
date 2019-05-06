@@ -18,14 +18,20 @@ if (!is_null($events['events'])) {
    $replyToken = $event['replyToken'];
    $sql= "SELECT * FROM member WHERE $text='Username'";
    $dbquery = mysql_db_query($dbname,$sql)or die("Error");
+   $result=mysql_query($sql);
+		$rows =mysql_num_rows($result);
+		$i=0;
+		if($rows>$i){
+  $textOutput='YES';
+		}else{ $textOutput='NO'}
    
   // $textOutput = array('ศูนย์','หนึ่ง','สอง','สาม','สี่','ห้า','หก','เจ็ด','แปด','เก้า','สิบ');
 
    // Build message to reply back
    $messages = [
     'type' => 'text',
-    'text' => 'xxxx'
-    //'text' => $textOutput[$text]
+    //'text' => 'xxxx'
+    'text' => $textOutput[$text]
    ];
 
    // Make a POST Request to Messaging API to reply to sender
