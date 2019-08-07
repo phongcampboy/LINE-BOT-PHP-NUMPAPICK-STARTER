@@ -44,5 +44,5 @@ if (!is_null($events['events'])) {
   }
  }
 }
-echo "OK TMN";
+echo "OK TMN CABLE TV";
 
